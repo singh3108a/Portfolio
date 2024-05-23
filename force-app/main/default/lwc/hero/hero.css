@@ -1,0 +1,33 @@
+.image{
+    border: 3px solid black;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.allignment-data{
+    text-align: center;
+}
+
+h1{
+    margin-top: 10px;
+    font-size: 32px;
+}
+
+p{
+    font-size: 20px;
+}
+button{
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+@media only screen and (min-width: 600px) {
+    .container{
+        float: right;
+        width: 50%;
+    }
+
+    .allignment-data{
+        margin-top: 10%;
+    }
+}

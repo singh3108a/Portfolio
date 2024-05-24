@@ -9,6 +9,7 @@
         <button onclick={openModal}>Click Me</button>
     </div>
 
+    <c-custom-toast-message></c-custom-toast-message>
     <template if:true={modalOpen}>
         <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
             aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
@@ -36,6 +37,7 @@
 
                     <lightning-button variant="neutral" label="Save" onclick={handleSave}></lightning-button>
                     <lightning-button variant="brand" label="Cancel" onclick={hideModalBox}></lightning-button>
+                    
                 </div>
             </div>
         </section>

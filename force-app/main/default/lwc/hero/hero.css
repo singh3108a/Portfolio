@@ -1,3 +1,7 @@
+.outer-container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
 .image{
     border: 3px solid black;
     border-radius: 8px;
@@ -17,13 +21,21 @@ p{
     font-size: 20px;  
 }
 button{
+    width: 30%;
+    font-size: 18px;
     border-radius: 8px;
     margin-top: 10px;
+    background-color: var(--dxp-g-brand);
+    color: var(--dxp-g-brand-contarst);
 }
 
 @media only screen and (min-width: 600px) {
+    .outer-container{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
     .container{
-        float: right;
         width: 50%;
     }
 

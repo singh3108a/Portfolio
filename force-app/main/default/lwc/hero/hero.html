@@ -1,47 +1,48 @@
 <template>
-    <div class="container">
-        <img class="image" src={photoUrl}>
-    </div>
-
-    <div class="allignment-data container">
-        <h1>My Name is Ankit</h1>
-        <p>This is my portfolio!!</p>
-        <button onclick={openModal}>Click Me</button>
-    </div>
-
-    <c-custom-toast-message></c-custom-toast-message>
-    <template if:true={modalOpen}>
-        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
-            aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
-            <div class="slds-modal__container">
-                <!-- modal header start -->
-                <header class="slds-modal__header">
-                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
-                        title="Close" onclick={hideModalBox}>
-                        <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse"
-                            size="small"></lightning-icon>
-                        <span class="slds-assistive-text">Close</span>
-                    </button>
-                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">New Lead</h2>
-                </header>
-
-                <!-- modal body start -->
-                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
-
-                    <lightning-input type="text" label="FirstName" onblur={handleFirstName}></lightning-input>
-                    <lightning-input type="text" label="LastName" onblur={handleLastName}></lightning-input>
-                    <lightning-input type="text" label="Company" onblur={handleCompany}></lightning-input>
-                    <lightning-input type="email" label="Email" onblur={handleEmail}></lightning-input>
-                    <lightning-textarea max-length="1000" name="Description" label="Description"
-                        placeholder="Description..." value={value} variant="standard" onblur={handleDescription}></lightning-textarea>
-
-                    <lightning-button variant="neutral" label="Save" onclick={handleSave}></lightning-button>
-                    <lightning-button variant="brand" label="Cancel" onclick={hideModalBox}></lightning-button>
-                    
+    <div class="outer-container">
+        <div class="container">
+            <img class="image" src={photoUrl}>
+        </div>
+    
+        <div class="allignment-data container">
+            <h1>My Name is Ankit</h1>
+            <p>This is my portfolio!!</p>
+            <button onclick={openModal}>Click Me</button>
+        </div>
+    
+        <c-custom-toast-message></c-custom-toast-message>
+        <template if:true={modalOpen}>
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+                aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <!-- modal header start -->
+                    <header class="slds-modal__header">
+                        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                            title="Close" onclick={hideModalBox}>
+                            <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse"
+                                size="small"></lightning-icon>
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">New Lead</h2>
+                    </header>
+    
+                    <!-- modal body start -->
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+    
+                        <lightning-input type="text" label="FirstName" onblur={handleFirstName}></lightning-input>
+                        <lightning-input type="text" label="LastName" onblur={handleLastName}></lightning-input>
+                        <lightning-input type="text" label="Company" onblur={handleCompany}></lightning-input>
+                        <lightning-input type="email" label="Email" onblur={handleEmail}></lightning-input>
+                        <lightning-textarea max-length="1000" name="Description" label="Description"
+                            placeholder="Description..." value={value} variant="standard" onblur={handleDescription}></lightning-textarea>
+    
+                        <lightning-button variant="neutral" label="Save" onclick={handleSave}></lightning-button>
+                        <lightning-button variant="brand" label="Cancel" onclick={hideModalBox}></lightning-button>
+                        
+                    </div>
                 </div>
-            </div>
-        </section>
-        <div class="slds-backdrop slds-backdrop_open"></div>
-    </template>
-
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </template>
+    </div>
 </template>
